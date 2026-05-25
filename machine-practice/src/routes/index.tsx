@@ -1,9 +1,11 @@
 import { lazy } from 'react';
 
+const Home = lazy(() => import(/* webpackChunkName: "home-page" */ '../pages/Home'));
+
 const routes = [
     {
         path: '/',
-        component: () => lazy(() => import(/* webpackChunkName: "home-page" */ '../pages/Home')),
+        component: Home
     }
 ];
 
